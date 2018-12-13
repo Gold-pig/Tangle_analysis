@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="067afdeb-be25-4d01-99e1-0c6fbc13ed07" name="Default" comment="" />
+    <list default="true" id="067afdeb-be25-4d01-99e1-0c6fbc13ed07" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/All_degree_list_calculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/All_degree_list_calculation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Degree_histogram_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Degree_histogram_plot.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Degree_histogram_plot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Degree_histogram_plot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Degree_histogram_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+            <state relative-caret-position="2115">
+              <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -23,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="All_degree_list_calculation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="All_degree_list_calculation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/All_degree_list_calculation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="242">
+              <caret line="20" selection-start-line="20" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -52,6 +55,9 @@
       <find>in_</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -71,10 +77,8 @@
         <option value="$PROJECT_DIR$/Degree_plot.py" />
         <option value="$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/0707d5ac61db7ef30b6f40038543578a/Message/MessageTemp/d8e0c019b7e5f27868d4a6f7ac685fb6/File/Cumulative_weight_calculation.py" />
         <option value="$PROJECT_DIR$/Cumulative_weight_calculation.py" />
-        <option value="$PROJECT_DIR$/All_degree_list_calculation.py" />
         <option value="$PROJECT_DIR$/In_degree_percent.py" />
         <option value="$PROJECT_DIR$/Search_star.py" />
-        <option value="$PROJECT_DIR$/Degree_histogram_plot.py" />
         <option value="$PROJECT_DIR$/betweeness.py" />
         <option value="$PROJECT_DIR$/Timestamp_sorting_draw_plot.py" />
         <option value="$PROJECT_DIR$/betweeness_plot.py" />
@@ -82,15 +86,18 @@
         <option value="$PROJECT_DIR$/shortest_path_tail_head.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/All_Degree_list.py" />
+        <option value="$PROJECT_DIR$/All_degree_list_calculation.py" />
+        <option value="$PROJECT_DIR$/Degree_histogram_plot.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="329" />
-    <option name="y" value="64" />
+    <option name="x" value="64" />
+    <option name="y" value="57" />
     <option name="width" value="1086" />
     <option name="height" value="792" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -138,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.All_Degree_list">
+  <component name="RunManager" selected="Python.Degree_histogram_plot">
     <configuration name="All_Degree_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tangle_data_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,7 +164,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Timestamp_sorting_draw_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="All_degree_list_calculation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tangle_data_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -169,7 +176,25 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Timestamp_sorting_draw_plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/All_degree_list_calculation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Degree_histogram_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tangle_data_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Degree_histogram_plot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,38 +236,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test_ijson" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tangle_data_analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_ijson.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
       <item itemvalue="Python.betweeness" />
-      <item itemvalue="Python.Timestamp_sorting_draw_plot" />
-      <item itemvalue="Python.test_ijson" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.All_Degree_list" />
+      <item itemvalue="Python.All_degree_list_calculation" />
+      <item itemvalue="Python.Degree_histogram_plot" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Degree_histogram_plot" />
+        <item itemvalue="Python.All_degree_list_calculation" />
         <item itemvalue="Python.All_Degree_list" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.betweeness" />
-        <item itemvalue="Python.test_ijson" />
-        <item itemvalue="Python.Timestamp_sorting_draw_plot" />
       </list>
     </recent_temporary>
   </component>
@@ -250,11 +257,10 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="300" y="64" width="1086" height="792" extended-state="0" />
-    <editor active="true" />
+    <frame x="64" y="57" width="1086" height="792" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3230047" />
-      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.26236263" />
       <window_info anchor="bottom" x="64" y="460" width="1340" height="266" id="Run" order="4" visible="true" weight="0.30494505" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -673,20 +679,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Degree_histogram_plot.py">
+    <entry file="file://$PROJECT_DIR$/All_degree_list_calculation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+        <state relative-caret-position="242">
+          <caret line="20" selection-start-line="20" selection-end-line="29" selection-end-column="30" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/All_degree_list_calculation.py">
+    <entry file="file://$PROJECT_DIR$/Degree_histogram_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="2115">
+          <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
