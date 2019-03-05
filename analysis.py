@@ -1,15 +1,15 @@
 from networkx import nx
 import numpy as np
 import json
-from operator import __or__, itemgetter
+from operator import __or__
 from functools import reduce
 import random
 
-cumsum_path = "/tmp/cumsum_18675.json"
+cumsum_path = "/tmp/cumsum.txt"
 
-with open('trunk_link_IRI_1.1.2.4_18675.json') as f1:
+with open('trunk_link_IRI_1.1.2.2_13157.json') as f1:
         trunk_link = json.load(f1)
-with open('branch_link_IRI_1.1.2.4_18675.json') as f2:
+with open('branch_link_IRI_1.1.2.2_13157.json') as f2:
         branch_link = json.load(f2)
 
 G = nx.DiGraph()
@@ -32,7 +32,7 @@ print("#Leafs: ", [n for n in G.nodes if G.in_degree(n) == 0])
 # Let in the following be G = (V, E) the directed acyclic graph, N = |V| and b the maximal branching factor
 N = len(G.nodes)
 print("Compute index")
-idxs = list(map(itemgetter(0), sorted((n, i) for i, n in enumerate(G.nodes))))
+idxs = [list(G.nodes).index(i) for i in range(N)]
 
 # easy solution: count ancestors for each node, time complexity: O(N^2)
 # cumsum = [len(nx.ancestors(G, n)) + 1 for n in G.nodes]
@@ -49,13 +49,12 @@ for (i, j) in G.edges:
     A[idxs[i], idxs[j]] = 1
 
 print("Compute cumulative sum")
-for i, n in enumerate(np.flip(list(nx.topological_sort(G)), axis=0)):
+for i, n in enumerate(np.flip(list(nx.topological_sort(G)),0)):
     print(i)
     A[idxs[n], :] = reduce(__or__, (A[idxs[p], :] for p in list(G.successors(n)) + [n]))
     A[idxs[n], idxs[n]] = 1  # node's own weight
 
 cumsum = np.sum(A, dtype=np.uint64, axis=0)
-cumsum_dict = {n: int(cumsum[idxs[n]]) for n in G.nodes}
 
 # idea for minor improvement: for each row, make logical-or with predecessors. 
 # In parallel, add current row to cumsum array, then delete row
@@ -63,24 +62,22 @@ cumsum_dict = {n: int(cumsum[idxs[n]]) for n in G.nodes}
 print("Testing cumulative sum")
 
 # test procedure (test on all or on a random subset of nodes)
-no_selector = lambda: []
 random_selector = lambda: (list(G.nodes)[random.randint(0, N - 1)] for i in range(1000))  # check random subset -> useful for bigger datasets
-linear_selector = lambda: G.nodes  # check all nodes -> useful for smaller datasets
+linear_selector = lambda: (G.nodes)  # check all nodes -> useful for smaller datasets
 
 failed = []
-for n in random_selector(): 
+for n in random_selector():
     result = "OK"
-    if len(nx.ancestors(G, n)) + 1 != cumsum_dict[n]: 
-        failed.append({"id": n, "ancestors": len(nx.ancestors(G, n)), "cumulative sum": cumsum_dict[n]})
+    if len(nx.ancestors(G, n)) + 1 != cumsum[idxs[n]]: 
+        failed.append({"id": n, "ancestors": len(nx.ancestors(G, n)), "cumulative sum": cumsum[idxs[n]]})
         result = "FAILED"
     print("Test", n, " -> ", result)
- 
+        
 print("Testing done. Failed for", len(failed))
 
 print("Write cumulative sum to", cumsum_path)
 
-with open(cumsum_path, "w") as fh: 
-    fh.write(json.dumps(cumsum_dict))
+np.savetxt(cumsum_path, cumsum)
 
 print("Done.")
 

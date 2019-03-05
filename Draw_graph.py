@@ -62,19 +62,19 @@ for e in range(len(branch_link)):
 
 
 #calculation difference of links
-diff_list_branch = []
-for i in range(len(branch_link)):
-    difference = data[branch_link[i][1]]["cumulative weight"] - data[branch_link[i][0]]["cumulative weight"]
-    diff_list_branch.append(difference)
-print(diff_list_branch)
-
-diff_list_trunk = []
-for i in range(len(trunk_link)):
-    difference = data[trunk_link[i][1]]["cumulative weight"] - data[trunk_link[i][0]]["cumulative weight"]
-    diff_list_trunk.append(difference)
-print(diff_list_trunk)
-
-diff_list = diff_list_branch + diff_list_trunk
+# diff_list_branch = []
+# for i in range(len(branch_link)):
+#     difference = data[branch_link[i][1]]["cumulative weight"] - data[branch_link[i][0]]["cumulative weight"]
+#     diff_list_branch.append(difference)
+# print(diff_list_branch)
+#
+# diff_list_trunk = []
+# for i in range(len(trunk_link)):
+#     difference = data[trunk_link[i][1]]["cumulative weight"] - data[trunk_link[i][0]]["cumulative weight"]
+#     diff_list_trunk.append(difference)
+# print(diff_list_trunk)
+#
+# diff_list = diff_list_branch + diff_list_trunk
 
 
 def store():

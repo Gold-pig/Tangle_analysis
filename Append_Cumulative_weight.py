@@ -3,9 +3,9 @@ import networkx as nx
 import json
 
 #convert .json to list
-with open('trunk_link_IRI_1.0.2_110916.json') as f1:
+with open('trunk_link_2016.json') as f1:
         trunk_link = json.load(f1)
-with open('branch_link_IRI_1.0.2_110916.json') as f2:
+with open('branch_link_2016.json') as f2:
         branch_link = json.load(f2)
 
 with open("transactions_2016.json") as f:
@@ -24,7 +24,9 @@ for e in range(len(branch_link)):
     b = branch_link[e][1]
     G.add_edge(a, b)
 
-
+print(G.in_degree(10))
+print(G.out_degree(10))
+print(len(G.edges))
 
 #test for cumulative weight list
 cum_weight_list = []
@@ -34,17 +36,17 @@ for i in range(len(data)):
 print(cum_weight_list)
 
 #test for add the cumulative weight to the original dataset
-new_database = []
-for i in range(len(data)):
-        data[i].setdefault('cumulative weight',cum_weight_list[i]+1)
-        print(data[i])
-        new_database.append(data[i])
-print(new_database)
-
-
-
-with open('transactions_2016 with c_weight_test.json', 'w') as f3:
-        f3.write(json.dumps(new_database))
+# new_database = []
+# for i in range(len(data)):
+#         data[i].setdefault('cumulative weight',cum_weight_list[i]+1)
+#         print(data[i])
+#         new_database.append(data[i])
+# print(new_database)
+#
+#
+#
+# with open('transactions_2016 with c_weight_test.json', 'w') as f3:
+#         f3.write(json.dumps(new_database))
 
 # in_degree_list = []
 # for i in range(0,468376):

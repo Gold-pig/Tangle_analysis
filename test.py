@@ -3,10 +3,18 @@ import networkx as nx
 import json
 import numpy as np
 import pylab as pl
-# G_tmp = nx.DiGraph()
-# links = [(1,0),(2,0),(3,2),(4,2),(5,4),(6,4)]
-# for link in links:
-#   G_tmp.add_edge(link[0], link[1])
+from networkx import nx
+import numpy as np
+import json
+from operator import __or__, itemgetter
+from functools import reduce
+import random
+from scipy import sparse
+import time
+
+
+
+
 #
 # weight_list = []
 # for i in [0,1,2,3,4,5,6]:
@@ -56,16 +64,18 @@ import pylab as pl
 # plt.ylabel('nodes num. ')
 # plt.legend()
 # plt.show()
-
-
-# with open("branch_link_2016.json") as f0:
+#
+#
+# with open("branch_link_IRI_1.5.3_774804.json") as f0:
 #     branch_link = json.load(f0)
 #
-# with open("trunk_link_2016.json") as f1:
+# with open("trunk_link_IRI_1.5.3_774804.json") as f1:
 #     trunk_link = json.load(f1)
+# with open("topology_216223.json") as f1:
+#     topology = json.load(f1)
 
-with open("IRI_1.4.2.2_426522.json") as f:
-    data = json.load(f)
+# with open("IRI_1.4.2.2_426522.json") as f:
+#     data = json.load(f)
 
 # G = nx.DiGraph()
 #
@@ -77,8 +87,48 @@ with open("IRI_1.4.2.2_426522.json") as f:
 #     a = branch_link[e][0]
 #     b = branch_link[e][1]
 #     G.add_edge(a, b)
+# print(G.edges)
 
 # print(list(G.predecessors(123)))
 # print(G.in_degree(123))
-# print(G.out_degree(123))
-print(data[20499])
+# # print(G.out_degree(123))
+# print(data[20499])
+# data = [1] *len(G.edges)
+# print(data)
+# idxs = list(map(itemgetter(0), sorted((n, i) for i, n in enumerate(G.nodes))))
+
+# A = sparse.lil_matrix((3528643,3528643))
+# for i in G.edges:
+#     A[i[0],i[1]] = 1
+# print(A)
+
+# B = nx.adjacency_matrix(G).todense
+# print(B)
+
+# print(nx.dfs_predecessors(G_tmp, source=6))
+# list = list(nx.topological_sort(G))
+# with open("topology_774804.json", "w+") as f:
+#         json.dump(list,f)
+# #
+# print(time.asctime( time.localtime(time.time())))
+
+# c_w = {}
+# for i in topology[1077000:]:
+#     n = len(list(nx.ancestors(G,i)))
+#     c_w[i] = n
+# print(c_w)
+# with open("cw_1077000_1077960_587745.json", "w+") as f:
+#         json.dump(c_w,f)
+# print(time.asctime( time.localtime(time.time()) )
+# )
+
+
+def diff(listA,listB):
+    listC = list(set(listB).difference(set(listA)))
+    return listC
+listA = [1,2,3,4]
+listB = [1,2,3,4,5]
+print(diff(listA,listB))
+d = {}
+d[1] = diff(listA,listB)
+print(d)

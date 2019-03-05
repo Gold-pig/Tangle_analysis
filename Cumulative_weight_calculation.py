@@ -157,7 +157,7 @@ def tag_precessors(idx):
       tagged[idx] = 1
     return pcs[idx]
 
-
+#using the recursive algorithm to calculative every site cumulavtive weight
 
 
 for v in G_tmp.nodes():

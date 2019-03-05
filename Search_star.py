@@ -39,7 +39,7 @@ print(In_degree_big_10)
 milestone_num = 0
 no_milestone_num = 0
 for item in In_degree_big_10:
-    if data[item]["address"] == 'KPWCHICGJZXKE9GSUDXZYUAPLHAKAHYHDXNPHENTERYMMBQOPSQIDENXKLKCEYCPVTZQLEEJVYJZV9BWU' or '999999999999999999999999999999999999999999999999999999999999999999999999999999999':
+    if data[item]["address"] == 'KPWCHICGJZXKE9GSUDXZYUAPLHAKAHYHDXNPHENTERYMMBQOPSQIDENXKLKCEYCPVTZQLEEJVYJZV9BWU':
         milestone_num+=1
     else:
         no_milestone_num+=1
@@ -52,11 +52,16 @@ print("max in_degree:",max(in_degree_list))
 # with open('In_degree_list_IRI.json', 'w') as f3:
 #         f3.write(json.dumps(in_degree_list))
 ####Delete: find a node with in-degree 108
-# for i in range(len(data)):
-#     if G.in_degree(i) == 108:
-#         print(i)
-#
-# print(data[784]["cumulative weight"])
+for i in range(len(data)):
+    if G.in_degree(i) == 7:
+        print(i)
+        print(data[i]["hash"])
+        print(data[i]['address'])
+        for j in range(len(data)):
+           if list(G.successors(j)).__contains__(i):
+               print("Its children are ",j,data[j]["tag"])
+
+
 
 # list_784 = []
 # for i in range(len(branch_link)):
