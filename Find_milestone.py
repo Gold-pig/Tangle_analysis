@@ -2,7 +2,7 @@ import iota
 import iotapy
 import json
 
-name = "MS10"
+name = "MS7"
 
 r = iotapy.storage.providers.rocksdb.RocksDBProvider(
         db_path='/Users/fengyangguo/Downloads/mainnetdb',
@@ -35,10 +35,10 @@ def milestone_list(num):
     milestone = []
     # milestone.append(r.first('milestone'))
     # num = 243000
-    while num <=587744:
-        if num<=587744:
+    while num <=242661:
+        if num<=242661:
             # print(r.next(num,'milestone')[1])
-            if num == 426550:
+            if num == 217000:
                 milestone_dict = {}
                 milestone_dict["index"] = r.first("milestone")[0]
                 milestone_dict['hash'] = str(r.first("milestone")[1][1])
@@ -49,6 +49,7 @@ def milestone_list(num):
                 milestone_dict['branch_hash'] = str(tx.branch_transaction_hash)
                 milestone_dict['timestamp'] = str(tx.timestamp)
                 milestone.append(milestone_dict)
+                print(milestone_dict)
 
             else:
                 milestone_dict = {}
@@ -87,7 +88,7 @@ def milestone_list(num):
 
     return milestone
 
-milestone_list(426550)
+milestone_list(217000)
 
 
 # with open("{n}_milestone_list.txt".format(n = name),"w") as f:
